@@ -24,18 +24,18 @@ func calculator() {
 	var operation string
 	fmt.Print("enter first number")
 	fmt.Scan(&first_input)
-	fmt.Print("enter first number")
+	fmt.Print("enter second number")
 	fmt.Scan(&second_input)
 	fmt.Print("enter choose the operation you want to perform")
 	fmt.Scan(&operation)
 	if(operation == "+"){
-		fmt.Printf(first_input + second_input)
+		fmt.Println(first_input + second_input)
 	} else if (operation == "-") {
-		fmt.Printf(first_input - second_input)
+		fmt.Println(first_input - second_input)
 	} else if (operation == "/") {
-		fmt.Printf(first_input / second_input)
+		fmt.Println(first_input / second_input)
 	} else if (operation == "x") {
-		fmt.Printf(first_input * second_input)
+		fmt.Println(first_input * second_input)
 	}
 }
 	
