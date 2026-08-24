@@ -64,11 +64,47 @@ func ageCalc() {
 	fmt.Printf("your age is %d", current_year - input)
 }
 
+func multiplicationTable() {
+	var n int
+	limit := 10
+	fmt.Println("Enter a number to multiply")
+	fmt.Scan(&n)
+	for i :=1; i <= limit; i++ {
+		fmt.Printf("%d x %d = %d \n", n, i, n*i)
+	}
+}
+
+func countToN() {
+	var end int
+	fmt.Println("Enter a number to count to")
+	fmt.Scan(&end)
+	for i := 1; i <= end; i++ {
+		fmt.Printf("%d, ", i)
+	}	
+}
+
+func sumOf1ToN () {
+	var input int
+	sum := 0
+	fmt.Println("Enter a number to sum to")
+	fmt.Scan(&input)
+	for i := 1; i <= input; i++ {
+		sum += i
+	}
+	fmt.Println("the sum is: ", sum)
+}
+
+
 func main() {
 	/*	printHelloWorld()
 	evenOdd()
 	calculator()
 	negativeVsPositive()
-	*/
 	ageCalc()
+	
+	multiplicationTable()
+	
+	countToN()
+	*/
+	sumOf1ToN()
 }
