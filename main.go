@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 	"strconv"
+	"math/rand"
 )
 
 func printHelloWorld() {
@@ -94,6 +95,26 @@ func sumOf1ToN () {
 	fmt.Println("the sum is: ", sum)
 }
 
+func fizzbuzz () {
+	limit := 100
+	for i := 0; i<= limit; i++ {
+		if i % 5 == 0 && i % 3 == 0 {
+			fmt.Println("Fizzbuzz")
+		} else if i % 5 == 0 {
+			fmt.Println("buzz")
+		} else if i % 3 == 0 {
+			fmt.Println("fizz")
+		} else {
+			fmt.Println(i)
+		}
+	}
+}
+
+func guessTheNumber() {
+	
+	rn := rand.Intn(1000)
+	fmt.Println(rn)
+}
 
 func main() {
 	/*	printHelloWorld()
@@ -101,10 +122,11 @@ func main() {
 	calculator()
 	negativeVsPositive()
 	ageCalc()
-	
 	multiplicationTable()
-	
 	countToN()
-	*/
 	sumOf1ToN()
+	fizzbuzz()
+	guessTheNumber()
+	*/
+	guessTheNumber()	
 }
