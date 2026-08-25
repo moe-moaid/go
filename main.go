@@ -110,10 +110,21 @@ func fizzbuzz () {
 	}
 }
 
-func guessTheNumber() {
-	
+func guessTheNumber() {	
 	rn := rand.Intn(1000)
-	fmt.Println(rn)
+	var input int
+	fmt.Println("Guess the number")
+	fmt.Scan(&input)
+	for input != rn {
+		if input > rn {
+			fmt.Println("Lower")
+			fmt.Scan(&input)
+		} else {
+			fmt.Println("Higher")
+			fmt.Scan(&input)
+		}
+	}
+	fmt.Println("Correct!")
 }
 
 func main() {
