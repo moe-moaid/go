@@ -10,9 +10,16 @@ type Person struct {
 }
 
 
-func findLargestNumber(arr []int)([]int) {
-	var slice = arr[2 : 8]
-	return slice
+func findLargestNumber(arr []int)(int) {
+	var result int
+	for i := 0; i < len(arr) - 1; i++ {
+		if arr[i] > result {
+			result = arr[i]
+		} else if arr[i+1] > result {
+			result = arr[i+1]
+		}
+	}
+	return result
 }
 
 func workWithStructs() {
@@ -29,9 +36,7 @@ func workWithStructs() {
 }
 
 func main() {
-	var s = []int{1,3,2,4,5,6,6,7}
-	fmt.Println(findLargestNumber(s), len(s), cap(s))
-	s = s[2:6]
-	fmt.Println("New slice dimentions", len(s), cap(s))
+	var s = []int{1,3,2,12,5,23,6,7}
+	fmt.Printf("largest number is:: %d \n", findLargestNumber(s))
 	workWithStructs()
 }
