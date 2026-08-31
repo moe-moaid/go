@@ -30,6 +30,14 @@ func evenNumbersCount (input []int)(int) {
 	return count
 }
 
+func reverceArray (input []int) ([]int) {
+	var newArr [] int
+	for i := len(input) -1 ; i > 0; i-- {
+		newArr = append(newArr, input[i])
+	}
+	return newArr
+}
+
 func main(){
 	numbers := []int {1,2,3,4,5,6,7,8,9,10}
 	var large int = findLargestNumber(numbers)
@@ -38,4 +46,6 @@ func main(){
 	fmt.Println(average)
 	var count int = evenNumbersCount(numbers)
 	fmt.Println(count)
+	var invert []int = reverceArray(numbers)
+	fmt.Println(invert)
 }
