@@ -1,4 +1,4 @@
-package main
+package level_2
 
 import (
 	"fmt"
@@ -50,7 +50,8 @@ func fizzbuzz () {
 	}
 }
 
-func guessTheNumber() {	
+func
+ GuessTheNumber() {	
 	rn := rand.Intn(1000)
 	var input int
 	fmt.Println("Guess the number")
@@ -72,5 +73,5 @@ func main() {
 	countToN()
 	sumOf1ToN()
 	fizzbuzz()
-	guessTheNumber()
+	GuessTheNumber()
 }

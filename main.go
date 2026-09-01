@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"learningGo/level_2"
 )
 
 type Person struct {
@@ -39,4 +40,5 @@ func main() {
 	var s = []int{1,3,2,12,5,23,6,7}
 	fmt.Printf("largest number is:: %d \n", findLargestNumber(s))
 	workWithStructs()
+	level_2.GuessTheNumber();
 }
