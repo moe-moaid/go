@@ -2,6 +2,7 @@ package main
 
 import ("fmt")
 
+// a func to find the lartest number in a slice
 func findLargestNumber(input []int)(largest int) {
 	largest = 0
 	for i:= 0; i < len(input); i++ {
@@ -12,6 +13,7 @@ func findLargestNumber(input []int)(largest int) {
 	return largest
 }
 
+// a func to find the average of an slice
 func findAverage(input []int)(int){
 	sum := 0
 	for i := 0; i< len(input); i++ {
@@ -20,6 +22,7 @@ func findAverage(input []int)(int){
 	return sum
 }
 
+// a func to find the number of even numbers in a slice
 func evenNumbersCount (input []int)(int) {
 	var count int
 	for i := 0; i < len(input); i++ {
@@ -30,7 +33,8 @@ func evenNumbersCount (input []int)(int) {
 	return count
 }
 
-func reverceArray (input []int) ([]int) {
+// a func to reverce a slice
+func reverceSlice (input []int) ([]int) {
 	var newArr [] int
 	for i := len(input) -1 ; i > 0; i-- {
 		newArr = append(newArr, input[i])
@@ -46,6 +50,6 @@ func main(){
 	fmt.Println(average)
 	var count int = evenNumbersCount(numbers)
 	fmt.Println(count)
-	var invert []int = reverceArray(numbers)
+	var invert []int = reverceSlice(numbers)
 	fmt.Println(invert)
 }
