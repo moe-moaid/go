@@ -43,7 +43,7 @@ func reverceSlice (input []int) ([]int) {
 }
 
 func main(){
-	numbers := []int {1,2,3,4,5,6,7,8,9,10}
+	numbers := []int {1,2,3,4,5,6,7,8,9,10} // the main slice that willbe used in all funcs below
 	var large int = findLargestNumber(numbers)
 	fmt.Println(large)
 	var average int = findAverage(numbers)
