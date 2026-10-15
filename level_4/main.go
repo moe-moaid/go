@@ -13,12 +13,14 @@ type Student struct {
 var allStudents []Student;
 
 
-func addStudent(student Student) {
-	fmt.Println(student)
-	append(allStudents, student)
+func addStudent(student Student) []Student {
+	fmt.Println("student slice: ", student.name)
+	allStudents = append(allStudents, student)
+	return allStudents
 }
 
 func main() {
-	addStudent(Student {name: "moe", age: 25, grade: 66.4})
-	fmt.Println(allStudents)
+	testStudent := Student  {name: "moe", age: 25, grade: 66.4}
+	fmt.Println(addStudent(testStudent))
+	fmt.Println("allStudents slice:: ", allStudents)
 }
