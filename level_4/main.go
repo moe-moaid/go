@@ -14,13 +14,22 @@ var allStudents []Student;
 
 
 func addStudent(student Student) []Student {
-	fmt.Println("student slice: ", student.name)
 	allStudents = append(allStudents, student)
 	return allStudents
 }
 
+func listStudents() {
+	for i:= 0; i < len(allStudents); i ++ {
+		fmt.Println(allStudents[i])
+	}
+}
+
 func main() {
 	testStudent := Student  {name: "moe", age: 25, grade: 66.4}
-	fmt.Println(addStudent(testStudent))
+	addStudent(testStudent)
+	addStudent(testStudent)
+	addStudent(testStudent)
+	addStudent(testStudent)
 	fmt.Println("allStudents slice:: ", allStudents)
+	listStudents()
 }
