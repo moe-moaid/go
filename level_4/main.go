@@ -2,7 +2,7 @@ package main
 
 import ("fmt")
 
-// We wanna allow users to add students, list students, calculate a student, and look up a student
+// We wanna allow users to add students, list students, calculate average grades, and look up a student
 
 type Student struct {
 	name string
@@ -24,6 +24,14 @@ func listStudents() {
 	}
 }
 
+func calcAvg() float64 {
+	var sum float64
+	for i := 0; i < len(allStudents); i++ {
+		sum += allStudents[i].grade
+	}
+	return sum/float64(len(allStudents))
+}
+
 func main() {
 	testStudent := Student  {name: "moe", age: 25, grade: 66.4}
 	addStudent(testStudent)
@@ -32,4 +40,5 @@ func main() {
 	addStudent(testStudent)
 	fmt.Println("allStudents slice:: ", allStudents)
 	listStudents()
+	fmt.Println("average grades:: ", calcAvg())
 }
